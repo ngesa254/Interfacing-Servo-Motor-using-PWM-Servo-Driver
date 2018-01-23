@@ -21,6 +21,13 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
     }
 
+    // close the servo when finished to release resources
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        destroyServo();
+    }
+
     // access the servo
     private void setupServo(){
         try {
@@ -33,6 +40,7 @@ public class MainActivity extends Activity {
         }
     }
 
+    // close servo method
     private void destroyServo() {
         if (mServo != null) {
             try {
