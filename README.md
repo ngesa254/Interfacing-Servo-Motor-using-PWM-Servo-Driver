@@ -2,7 +2,7 @@
 
 Quick start your android things development by interfacing servo motor using PWM Servo Driver 🚀
 
-# Hardware Prerequisite:
+# Hardware Prerequisite
 - 
 - raspberry pi
 - servo motor 
