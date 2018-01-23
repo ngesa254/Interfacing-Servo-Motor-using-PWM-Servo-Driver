@@ -9,7 +9,7 @@ Quick start your android things development by interfacing servo motor using PWM
 # Prototype Schematic
 # Support
 
-- Found this project useful ❤️. Support by clicking the ⭐️ button on the upper right of this page. ✌️
+- Found this project useful ❤️? Support by clicking the ⭐️ button on the upper right of this page. ✌️
 
 - Notice anything else missing? File an issue 😄
 
