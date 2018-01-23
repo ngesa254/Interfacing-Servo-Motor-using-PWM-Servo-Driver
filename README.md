@@ -1,4 +1,5 @@
 # Interfacing Servo Motor using PWM Servo Driver
+
 Quick start your android things development by interfacing servo motor using PWM Servo Driver 🚀
 
 # Hardware Prerequisite:
@@ -7,6 +8,7 @@ Quick start your android things development by interfacing servo motor using PWM
 - servo motor 
 
 # Prototype Schematic
+
 # Support
 
 - Found this project useful ❤️? Support by clicking the ⭐️ button on the upper right of this page. ✌️
