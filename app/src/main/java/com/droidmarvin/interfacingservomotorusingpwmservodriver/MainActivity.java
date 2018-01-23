@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
     }
 
-    // Access the servo
+    // access the servo
     private void setupServo(){
         try {
            mServo = new Servo(PWM_BUS);
@@ -30,6 +30,18 @@ public class MainActivity extends Activity {
             mServo.setEnabled(true);
         }catch (IOException e){
             Log.e(TAG, "Error creating Servo", e);
+        }
+    }
+
+    private void destroyServo() {
+        if (mServo != null) {
+            try {
+                mServo.close();
+            } catch (IOException e) {
+                Log.e(TAG, "Error closing Servo");
+            } finally {
+                mServo = null;
+            }
         }
     }
 }
