@@ -7,6 +7,8 @@ import android.util.Log;
 import com.google.android.things.contrib.driver.pwmservo.Servo;
 
 import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends Activity {
 
@@ -15,6 +17,8 @@ public class MainActivity extends Activity {
     private static final String PWM_BUS = "PWM1";
 
     private Servo mServo;
+    int i;
+    private Timer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,16 @@ public class MainActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         destroyServo();
+    }
+
+    // create timer method
+    private void setTimer (){
+        timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+            }
+        }, 0, 3000);
     }
 
     // access the servo
