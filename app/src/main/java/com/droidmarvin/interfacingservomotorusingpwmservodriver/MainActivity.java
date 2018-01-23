@@ -38,8 +38,47 @@ public class MainActivity extends Activity {
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
+                nextMove();
             }
         }, 0, 3000);
+    }
+
+    private void nextMove() {
+        switch (i % 3) {
+            case 0:
+                turn0Degree();
+                break;
+            case 1:
+                turn90Degree();
+                break;
+            case 2:
+                turn180Degree();
+                break;
+        }
+        i++;
+    }
+
+    // make the servo turn
+    private void turn0Degree() {
+        try {
+            mServo.setAngle(0);
+        } catch (IOException e) {
+            // error setting servo
+        }
+    }
+    private void turn90Degree() {
+        try {
+            mServo.setAngle(90);
+        } catch (IOException e) {
+            // error setting servo
+        }
+    }
+    private void turn180Degree() {
+        try {
+            mServo.setAngle(180);
+        } catch (IOException e) {
+            // error setting servo
+        }
     }
 
     // access the servo
